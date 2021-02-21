@@ -1,0 +1,74 @@
+Calendar:
+  Created:
+    code: "<?php echo md5(strtoupper('Creada')) ?>"
+    name: Creada
+    comment: 'Este estado se usa para tareas recien creadas y propuestas a incluir en un plan de trabajo'
+    color: 6
+  InProgress:
+    code: "<?php echo md5(strtoupper('Aceptada')) ?>"
+    name: Aceptada
+    comment: 'Este estado se usa para tareas aceptadas por el trabajador y que comienzan su curso'
+    color: 11
+  Finished:
+    code: "<?php echo md5(strtoupper('Terminada')) ?>"
+    name: Terminada
+    comment: 'Este estado se usa para tareas que se han terminado o cumplido'
+    color: 16
+  Closed:
+    code: "<?php echo md5(strtoupper('Cerrada')) ?>"
+    name: Cerrada
+    comment: 'Este estado se usa para tareas que se han terminado o incumplido para evaluar el resultado'
+    color: 21
+  Rejected:
+    code: "<?php echo md5(strtoupper('No aceptada')) ?>"
+    name: No aceptada
+    comment: 'Este estado se usa para tareas que no se han aceptado'
+    color: 26
+
+Taskstatus:
+  Created:
+    customcolor: '2E8F0C'
+    Calendar: Created
+    entityid: 1
+  InProgress:
+    customcolor: '8763CA'
+    Calendar: InProgress
+    entityid: 1
+  Finished:
+    customcolor: 'D5B816'
+    Calendar: Finished
+    iscomplete: 1
+    entityid: 1
+  Closed:
+    customcolor: '1A5173'
+    Calendar: Closed
+    iscomplete: 1
+    entityid: 1
+  Rejected:
+    customcolor: 'FA7166'
+    Calendar: Rejected
+    issuspended: 1
+    entityid: 1
+    
+TaskstatusRelation:
+  Created-InProgress:
+    FromTaskstatus: Created
+    ToTaskstatus: InProgress
+  Created-Rejected:
+    FromTaskstatus: Created
+    ToTaskstatus: Rejected
+    
+  InProgress-Finished:
+    FromTaskstatus: InProgress
+    ToTaskstatus: Finished
+    
+  Finished-Closed:
+    FromTaskstatus: Finished
+    ToTaskstatus: Closed
+    
+  Rejected-InProgress:
+    FromTaskstatus: Rejected
+    ToTaskstatus: InProgress
+  Rejected-Closed:
+    FromTaskstatus: Rejected
+    ToTaskstatus: Closed

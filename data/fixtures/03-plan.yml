@@ -1,0 +1,26 @@
+# Plan:
+  # PTAX:
+    # code: "<?php echo md5(strtoupper('PLAN DE TRABAJO DEL AÑO ').date('Y')) ?>"
+    # name: "<?php echo strtoupper('PLAN DE TRABAJO DEL AÑO ').date('Y') ?>"
+    # comment: 'Este es un plan de prueba cargado mediante datos iniciales'
+    # entityid: 1
+    # start: "<?php echo date('Y').'-01-01'  ?>"
+    # Goals: [OBJ1, OBJ2, OBJ3, OBJ4]
+# #<?php for ($i = 1; $i <= 12; $i++): ?>
+# #  PTAX<?php echo $i ?>:
+# #    code: "<?php echo strtoupper('PLAN DE TRABAJO DEL MES ').$i.strtoupper(' DEL AÑO ').date('Y')  ?>"
+# #    name: "<?php echo strtoupper('PLAN DE TRABAJO DEL MES ').$i.strtoupper(' DEL AÑO ').date('Y')  ?>"
+# #    comment: 'Este es un plan de prueba cargado mediante datos iniciales'
+# #    entityid: 1
+# #    Plan: [PTAX]
+# #    start: "<?php echo date('Y-').$i.'-01'  ?>"
+# #    Goals: [OBJ2, OBJ4]
+# #<?php endfor ?>
+# #
+# #PlanPersonRelation:
+# #<?php for ($i = 1; $i <= 12; $i++): ?>
+# #  PPRX<?php echo $i ?>:
+# #    planid: <?php echo $i ?>
+# #    personid: 1
+# #    readonly: '0'
+# #<?php endfor ?>

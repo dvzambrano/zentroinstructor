@@ -1,0 +1,10 @@
+# Position:
+  # Director:
+    # code: "<?php echo md5(strtoupper('Director').'1') ?>"
+    # name: 'Director' 
+  # Secretary:
+    # code: "<?php echo md5(strtoupper('Secretaria').'1') ?>"
+    # name: 'Secretaria'
+  # Especialist:
+    # code: "<?php echo md5(strtoupper('Especialista').'1') ?>"
+    # name: 'Especialista' 

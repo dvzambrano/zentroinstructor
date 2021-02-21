@@ -1,0 +1,39 @@
+Local:
+  Enterprise:
+    code: "<?php echo md5(strtoupper('Empresa')) ?>"
+    name: 'Empresa' 
+    comment: 'Edificacion sede de la Empresa'
+    path: '/NULL/1'
+    entityid: 1
+  # Economy:
+    # code: "<?php echo md5(strtoupper('Economía')) ?>"
+    # name: 'Economía' 
+    # Local: [Enterprise]
+    # path: '/NULL/1/2'
+    # entityid: 1
+  # Management:
+    # code: "<?php echo md5(strtoupper('Gerencia')) ?>"
+    # name: 'Gerencia' 
+    # comment: 'Oficina del gerente'
+    # Local: [Enterprise]
+    # path: '/NULL/1/3'
+    # entityid: 1
+  # Cyber:
+    # code: "<?php echo md5(strtoupper('Cibercafé')) ?>"
+    # name: 'Cibercafé' 
+    # Local: [Enterprise]
+    # path: '/NULL/1/4'
+    # entityid: 1
+  # Meetingroom:
+    # code: "<?php echo md5(strtoupper('Salón de reuniones')) ?>"
+    # name: 'Salón de reuniones' 
+    # is_excluding: 1
+    # Local: [Enterprise]
+    # path: '/NULL/1/5'
+    # entityid: 1
+  # Reception:
+    # code: "<?php echo md5(strtoupper('Recepción')) ?>"
+    # name: 'Recepción' 
+    # Local: [Enterprise]
+    # path: '/NULL/1/6'
+    # entityid: 1

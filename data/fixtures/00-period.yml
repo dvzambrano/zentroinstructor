@@ -1,0 +1,13 @@
+Period:
+  period1:
+    code: "<?php echo md5(strtoupper('Largo')) ?>"
+    name: 'Largo'
+    comment:
+  period2:
+    code: "<?php echo md5(strtoupper('Mediano')) ?>"
+    name: 'Mediano'
+    comment:
+  period3:
+    code: "<?php echo md5(strtoupper('Corto')) ?>"
+    name: 'Corto'
+    comment:

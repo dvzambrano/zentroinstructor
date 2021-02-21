@@ -1,0 +1,265 @@
+Module:
+  Entity:
+    code: "<?php echo md5(strtoupper('Entidades')) ?>"
+    name: 'Entidades'
+    comment: 'Gestión de entidades'
+    nick: 'Entity'
+    attributes: '[{"ispk":true,"name":"Código","nick":"code","type":"string","restriction":"50","nulleable":false},{"isak":true,"name":"Nombre","nick":"name","type":"string","restriction":"130","nulleable":false},{"name":"Descripción","nick":"comment","type":"string","restriction":"","nulleable":true},{"name":"Padre","nick":"parentid","type":"integer","restriction":"","nulleable":true}]'
+    relations: '[{"attributeid":"parentid","attribute":"Padre","typeid":"onetomany","type":"Uno a muchos","moduleid":"Entity","module":"Entidades"}]'
+    icon: 'chart_organisation.png'
+    is_multientity: 0
+    is_base: 1
+    is_active: 0
+    Permissions: [manageentity, manageentityadd, manageentityedit, manageentitydelete]
+    increase: '0000000001'
+  Entitymanager:
+    code: "<?php echo md5(strtoupper('Entidad')) ?>"
+    name: 'Entidad'
+    comment: 'Gestión de la entidad'
+    nick: 'Entitymanager'
+    attributes: '[{"ispk":true,"name":"Código","nick":"code","type":"string","restriction":"50","nulleable":false},{"isak":true,"name":"Nombre","nick":"name","type":"string","restriction":"130","nulleable":false},{"name":"Descripción","nick":"comment","type":"string","restriction":"","nulleable":true},{"name":"Padre","nick":"parentid","type":"integer","restriction":"","nulleable":true}]'
+    relations: '[{"attributeid":"parentid","attribute":"Padre","typeid":"onetomany","type":"Uno a muchos","moduleid":"Entity","module":"Entidades"}]'
+    icon: 'chart_organisation.png'
+    is_multientidable: 1
+    is_base: 1
+    is_active: 0
+    Permissions: [manageentity, manageselfentity]
+    DependentModules: [Entity, Note]
+    increase: '00000000001'
+  Plan:
+    code: "<?php echo md5(strtoupper('Planes de trabajo')) ?>"
+    name: 'Planes de trabajo'
+    nick: 'Plan'
+    comment: 'Gestión de los planes de trabajo'
+    attributes: '[{"name":"Código","nick":"code","type":"string","restriction":"","nulleable":false},{"name":"Nombre","nick":"name","type":"string","restriction":"","nulleable":false},{"name":"Descripción","nick":"comment","type":"string","restriction":"","nulleable":false},{"name":"Línea base","nick":"baseline","type":"string","restriction":"","nulleable":false},{"name":"Fecha de inicio","nick":"start","type":"date","restriction":"","nulleable":false}]'
+    icon: 'evolution-tasks.png'
+    is_multientidable: 1
+    is_base: 0
+    DependentModules: [Reminder, Note, Tasktype, Local, Taskstatus, User, Team]
+    Permissions: [manageplan, manageplanadd, manageplanedit, manageplandelete, manageplantoplan, manageplanbaseline, manageplanreport]
+    increase: '0000000020'
+  Goal:
+    code: "<?php echo md5(strtoupper('Objetivos de trabajo')) ?>"
+    name: 'Objetivos de trabajo'
+    nick: 'Goal'
+    comment: 'Gestión de los objetivos de trabajo'
+    attributes: '[{"name":"Código","nick":"code","type":"string","restriction":"","nulleable":false},{"name":"Nombre","nick":"name","type":"string","restriction":"","nulleable":false},{"name":"Descripción","nick":"comment","type":"string","restriction":"","nulleable":false},{"name":"Padre","nick":"parentid","type":"string","restriction":"","nulleable":false},{"name":"Periodo","nick":"period","type":"string","restriction":"","nulleable":false},{"name":"periodid","nick":"periodid","type":"string","restriction":"","nulleable":false}]'
+    icon: 'gnome-settings-default-applications.png'
+    is_multientidable: 1
+    #Module: [Plan]
+    is_base: 0
+    Permissions: [managegoal, managegoaladd, managegoaledit, managegoaldelete]
+    increase: '0000000040'
+  Resource:
+    code: "<?php echo md5(strtoupper('Recursos materiales')) ?>"
+    name: 'Recursos materiales'
+    nick: 'Resource'
+    comment: 'Gestión de los recursos'
+    attributes: '[{"name":"Código","nick":"code","type":"string","restriction":"","nulleable":false},{"name":"Nombre","nick":"name","type":"string","restriction":"","nulleable":false},{"name":"Rate","nick":"rate","type":"integer","restriction":"","nulleable":false},{"name":"Rate extra","nick":"extrarate","type":"integer","restriction":"","nulleable":false},{"name":"Descripción","nick":"comment","type":"string","restriction":"","nulleable":false}]'
+    icon: 'dropbox.png'
+    is_multientidable: 1
+    #Module: [Plan]
+    is_base: 0
+    is_active: 0
+    Permissions: [manageresource, manageresourceadd, manageresourceedit, manageresourcedelete]
+    increase: '00000000900'
+  Tasktype:
+    code: "<?php echo md5(strtoupper('Tipo de tarea')) ?>"
+    name: 'Tipo de tarea'
+    nick: 'Tasktype'
+    comment: 'Gestión de tipos de tareas'
+    attributes: '[{"name":"Código","nick":"code","type":"string","restriction":"","nulleable":false},{"name":"Nombre","nick":"name","type":"string","restriction":"","nulleable":false},{"name":"Descripción","nick":"comment","type":"string","restriction":"","nulleable":false}]'
+    icon: 'wand.png'
+    #Module: [Plan]
+    is_base: 0
+    Permissions: [managetasktype, managetasktypeadd, managetasktypeedit, managetasktypedelete]
+    increase: '0000000070'
+  Local:
+    code: "<?php echo md5(strtoupper('Local')) ?>"
+    name: 'Local'
+    nick: 'Local'
+    comment: 'Gestión de los locales'
+    attributes: '[{"name":"Código","nick":"code","type":"string","restriction":"","nulleable":false},{"name":"Nombre","nick":"name","type":"string","restriction":"","nulleable":false},{"name":"Descripción","nick":"comment","type":"string","restriction":"","nulleable":false}]'
+    icon: 'internet-archive.png'
+    is_multientidable: 1
+    #Module: [Plan]
+    is_base: 0
+#    is_multientity: 1
+    Permissions: [managelocal, managelocaladd, managelocaledit, managelocaldelete]
+    increase: '0000000090'
+  Team:
+    code: "<?php echo md5(strtoupper('Grupo de trabajo')) ?>"
+    name: 'Grupo de trabajo'
+    nick: 'Team'
+    comment: 'Gestión de los grupos de trabajo'
+    attributes: '[{"name":"Código","nick":"code","type":"string","restriction":"","nulleable":false},{"name":"Nombre","nick":"name","type":"string","restriction":"","nulleable":false},{"name":"Descripción","nick":"comment","type":"string","restriction":"","nulleable":false},{"name":"responsibleid","nick":"responsibleid","type":"int","restriction":"","nulleable":false},{"name":"Responsible","nick":"responsible","type":"string","restriction":"","nulleable":false},{"name":"responsibleid","nick":"responsibleid","type":"string","restriction":"","nulleable":false}]'
+    icon: 'ppa.png'
+    is_multientidable: 1
+    #Module: [Plan]
+    DependentModules: [User]
+    is_base: 0
+    Permissions: [manageteam, manageteamadd, manageteamedit, manageteamdelete]
+    increase: '0000000060'
+  Taskstatus:
+    code: "<?php echo md5(strtoupper('Estados de tarea')) ?>"
+    name: 'Estados de tarea'
+    nick: 'Taskstatus'
+    comment: 'Gestión de los estados de tarea'
+    attributes: '[{"name":"Código","nick":"code","type":"string","restriction":"","nulleable":false},{"name":"Nombre","nick":"name","type":"string","restriction":"","nulleable":false},{"name":"Descripción","nick":"comment","type":"string","restriction":"","nulleable":false}]'
+    icon: 'gimp.png'
+    is_multientidable: 1
+    #Module: [Plan]
+    is_base: 0
+    Permissions: [managetaskstatus, managetaskstatusadd, managetaskstatusedit, managetaskstatusdelete]
+    increase: '0000000050'
+  Schedule:
+    code: "<?php echo md5(strtoupper('Horarios')) ?>"
+    name: 'Horarios'
+    comment: 'Gestión de los horarios de trabajo'
+    nick: 'Schedule'
+    attributes: '[{"name":"Código","nick":"code","type":"string","restriction":"","nulleable":false},{"name":"Nombre","nick":"name","type":"string","restriction":"","nulleable":false},{"name":"Descripción","nick":"comment","type":"string","restriction":"","nulleable":false}]'
+    icon: 'clock.png'
+    is_multientidable: 1
+    Permissions: [manageschedule, managescheduleadd, managescheduleedit, managescheduledelete]
+    increase: '0000000100'
+  Period:
+    code: "<?php echo md5(strtoupper('Periodos')) ?>"
+    name: 'Periodos'
+    nick: 'Period'
+    comment: 'Gestión de periodos'
+    attributes: '[{"ispk":true,"name":"Código","nick":"code","type":"string","restriction":"50","nulleable":false},{"isak":true,"name":"Nombre","nick":"name","type":"string","restriction":"130","nulleable":false},{"name":"Descripción","nick":"comment","type":"string","restriction":"","nulleable":true}]'
+    icon: 'text_linespacing.png'
+    Permissions: [manageperiod, manageperiodadd, manageperiodedit, manageperioddelete]
+    increase: '0000000100'
+  Position:
+    code: "<?php echo md5(strtoupper('Cargos')) ?>"
+    name: 'Cargos'
+    nick: 'Position'
+    comment: 'Gestión de cargos'
+    attributes: '[{"ispk":true,"name":"Código","nick":"code","type":"string","restriction":"50","nulleable":false},{"isak":true,"name":"Nombre","nick":"name","type":"string","restriction":"130","nulleable":false},{"name":"Descripción","nick":"comment","type":"string","restriction":"","nulleable":true}]'
+    icon: 'award_star_gold_3.png'
+    Permissions: [manageposition, managepositionadd, managepositionedit, managepositiondelete]
+    increase: '8000000000'
+    
+    
+    
+  Charts:
+    code: "<?php echo md5(strtoupper('Gráficos')) ?>"
+    name: 'Gráficos'
+    nick: 'Chart'
+    comment: 'Generador de gráficos del sistema'
+    icon: 'wtop-charts.png'
+    is_base: 1
+    is_active: 0
+    Permissions: [managecharts]
+    increase: '9000000000'
+  Calendar:
+    code: "<?php echo md5(strtoupper('Calendario')) ?>"
+    name: 'Calendario'
+    nick: 'Calendar'
+    comment: 'Visor de eventos del sistema'
+    attributes: '[{"name":"Nombre","nick":"name","type":"string","restriction":"","nulleable":false},{"name":"Descripción","nick":"comment","type":"string","restriction":"","nulleable":false}]'
+    icon: 'wtop-calendars.png'
+    is_base: 1
+    is_multientidable: 1
+    Permissions: [managecalendar]
+    DependentModules: [Plan]
+    increase: '0000000010'
+  User:
+    code: "<?php echo md5(strtoupper('Usuarios')) ?>"
+    name: 'Usuarios'
+    nick: 'User'
+    comment: 'Gestión de usuarios del sistema'
+    icon: 'wtop-users.png'
+    is_base: 1
+    Permissions: [manageuser, manageuseradd, manageuseredit, manageuserdelete]
+    DependentModules: [Schedule, Contacttype]
+    increase: '7000000000'
+  Configuration:
+    code: "<?php echo md5(strtoupper('Configuración')) ?>"
+    name: 'Configuración'
+    nick: 'Metadata'
+    comment: 'Configuraci&oacute;n general del sistema'
+    icon: 'wtop-config.png'
+    is_base: 1
+    Permissions: [manageconfiguration]
+    increase: '9000000000'
+  Logs:
+    code: "<?php echo md5(strtoupper('Trazas')) ?>"
+    name: 'Trazas'
+    nick: 'Log'
+    comment: 'Auditoría de trazas del sistema'
+    icon: 'wtop-logs.png'
+    is_base: 1
+    Permissions: [managelog]
+    increase: '9000000000'
+  Reminder:
+    code: "<?php echo md5(strtoupper('Recordatorio')) ?>"
+    name: 'Recordatorios'
+    nick: 'Reminder'
+    comment: 'Gestión de recordatorios del sistema'
+    attributes: '[{"name":"Nombre","nick":"name","type":"string","restriction":"","nulleable":false},{"name":"Descripción","nick":"comment","type":"string","restriction":"","nulleable":false},{"name":"Valor","nick":"value","type":"int","restriction":"","nulleable":false},{"name":"Periodo","nick":"period","type":"int","restriction":"","nulleable":false}]'
+    icon: 'wtop-reminders.png'
+    #Module: [Configuration]
+    is_base: 1
+    Permissions: [managereminder, managereminderadd, managereminderedit, managereminderdelete]
+    DependentModules: [User]
+    increase: '9000000000'
+  Module:
+    code: "<?php echo md5(strtoupper('Módulos')) ?>"
+    name: 'Módulos'
+    nick: 'Module'
+    comment: 'Gestión de módulos del sistema'
+    attributes: '[{"name":"Código","nick":"code","type":"string","restriction":"","nulleable":false},{"name":"Nombre","nick":"name","type":"string","restriction":"","nulleable":false},{"name":"Alias","nick":"nick","type":"string","restriction":"","nulleable":false},{"name":"Descripción","nick":"comment","type":"string","restriction":"","nulleable":false},{"name":"Ícono","nick":"icon","type":"string","restriction":"","nulleable":true}]'
+    icon: 'wtop-modules.png'
+    #Module: [Configuration]
+    is_base: 1
+    is_active: 0
+    Permissions: [managemodule, managemoduleadd, managemoduleedit, managemoduledelete]
+    DependentModules: [User]
+    increase: '9000000000'
+  Contenteditor:
+    code: "<?php echo md5(strtoupper('Editor de contenido')) ?>"
+    name: 'Editor de contenido'
+    nick: 'Contenteditor'
+    comment: 'Editor de contenido'
+    attributes: '[{"ispk":true,"name":"Código","nick":"code","type":"string","restriction":"50","nulleable":false},{"isak":true,"name":"Nombre","nick":"name","type":"string","restriction":"130","nulleable":false},{"name":"Descripción","nick":"comment","type":"string","restriction":"","nulleable":true}]'
+    icon: 'page_paintbrush.png'
+    is_base: 1
+    is_active: 0
+    Permissions: [managemodule, managemoduleadd, managemoduleedit, managemoduledelete]
+    DependentModules: [Explorer]
+    increase: '9000000000'
+  Note:
+    code: "<?php echo md5(strtoupper('Editor de notas')) ?>"
+    name: 'Editor de notas'
+    nick: 'Note'
+    comment: 'Editor de notas'
+    attributes: '[{"ispk":true,"name":"Código","nick":"code","type":"string","restriction":"50","nulleable":false},{"isak":true,"name":"Nombre","nick":"name","type":"string","restriction":"130","nulleable":false},{"name":"Descripción","nick":"comment","type":"string","restriction":"","nulleable":true}]'
+    icon: 'page_paintbrush.png'
+    is_base: 1
+    is_active: 0
+    Permissions: [managemodule, managemoduleadd, managemoduleedit, managemoduledelete]
+    DependentModules: [Contenteditor]
+    increase: '9000000000'
+  Explorer:
+    code: "<?php echo md5(strtoupper('Explorador')) ?>"
+    name: 'Explorador'
+    nick: 'Explorer'
+    comment: 'Gestión de archivos y carpetas del sistema'
+    attributes: '[{"name":"Nombre","nick":"name","type":"string","restriction":"","nulleable":false},{"name":"Fecha de modificación","nick":"lastmod","type":"string","restriction":"","nulleable":false},{"name":"Tamaño","nick":"size","type":"string","restriction":"","nulleable":false}]'
+    icon: 'wtop-explorer.png'
+    #Module: [Configuration]
+    is_base: 1
+    is_active: 0
+    Permissions: [managefiles]
+    increase: '0000000160'
+  Contacttype:
+    code: "<?php echo md5(strtoupper('Tipos de contacto')) ?>"
+    name: 'Tipos de contacto'
+    nick: 'Contacttype'
+    comment: 'Gestión de tipos de contacto'
+    attributes: '[{"ispk":true,"name":"Código","nick":"code","type":"string","restriction":"50","nulleable":false},{"isak":true,"name":"Nombre","nick":"name","type":"string","restriction":"130","nulleable":false},{"name":"Descripción","nick":"comment","type":"string","restriction":"","nulleable":true}]'
+    icon: 'ekiga.png'
+    Permissions: [managecontacttype, managecontacttypeadd, managecontacttypeedit, managecontacttypedelete]
+    increase: '9000000000'

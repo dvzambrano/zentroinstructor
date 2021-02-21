@@ -1,0 +1,127 @@
+<?php $entities = array() ?>
+<?php $entitiesamount = 1 ?>
+<?php $names = array('Empresa X') ?>
+<?php $locals = array('Economía', 'Gerencia', 'Cibercafé', 'Salón de reuniones', 'Recepción') ?>
+<?php $teams = array('Gerencia', 'Desarrollo', 'Implementación', 'Diseño', 'Ingeniería', 'Calidad') ?>
+
+Entity:
+<?php for ($i = 1; $i <= $entitiesamount ; $i++): ?>
+<?php $x = $i; while($x>=count($names))$x-=count($names); ?>
+<?php $name = $names[$x]; ?>
+  Entity<?php echo $i ?>:
+    code: "<?php echo md5(strtoupper($name).$i) ?>"
+    name: "<?php echo $name ?>"
+    comment: "<?php echo 'Una pequeña descripción de la entidad '.$name ?>"
+#    phone: "<?php echo rand(1000000, 9999999) ?>"
+#    cellphone: "<?php echo rand(1000000, 9999999) ?>"
+#    address: "<?php echo 'Dirección donde esta ubicado la entidad '.$name ?>"
+#    email_address: "<?php echo strtolower(str_replace("&", "", str_replace(" ", "", $name))); ?>@domain.com"
+    logo: 'images/entity.png'
+<?php $entities["Entity".$i] = array('index'=>$i, 'types' => array(), 'taskstatues' => array(), 'roomstatues' => array(), 'rooms' => array(), 'services' => array(), 'categorys' => array()) ?>
+<?php endfor ?>
+
+
+#Local:
+#<?php $x = 1; ?>
+#<?php foreach ($entities as $key => $entity): ?>
+#<?php $localamount = rand(2, count($locals)); ?>
+#<?php for ($i = 0; $i < $localamount-1; $i++): ?>
+#  Local<?php echo $entity['index'].$i ?>:
+#    code: "<?php echo md5($locals[$i].$entity['index']) ?>"
+#    name: "<?php echo $locals[$i] ?>"
+#    is_excluding: "<?php echo rand(0, 1) ?>"
+#    entityid: "<?php echo $entity['index'] ?>"
+#<?php $entities[$key]['locals'][] = $x ?>
+#<?php $x++; ?>
+#<?php endfor ?>
+#<?php endforeach ?>
+
+
+Schedule:
+<?php foreach ($entities as $key => $entity): ?>
+  Schedule<?php echo $entity['index'] ?>:
+    code: "<?php echo md5(strtoupper('Horario normal').$entity['index']) ?>"
+    name: 'Horario habitual'
+    sesions: '[{"id":1,"sesions":"[]"},{"id":2,"sesions":"[{\"id\":0,\"begintime\":\"8:00 AM\",\"endtime\":\"12:00 PM\"},{\"id\":1,\"begintime\":\"12:30 PM\",\"endtime\":\"11:59 PM\"}]"},{"id":3,"sesions":"[{\"id\":0,\"begintime\":\"8:00 AM\",\"endtime\":\"12:00 PM\"},{\"id\":1,\"begintime\":\"12:30 PM\",\"endtime\":\"11:59 PM\"}]"},{"id":4,"sesions":"[{\"id\":0,\"begintime\":\"8:00 AM\",\"endtime\":\"12:00 PM\"},{\"id\":1,\"begintime\":\"12:30 PM\",\"endtime\":\"11:59 PM\"}]"},{"id":5,"sesions":"[{\"id\":0,\"begintime\":\"8:00 AM\",\"endtime\":\"12:00 PM\"},{\"id\":1,\"begintime\":\"12:30 PM\",\"endtime\":\"11:59 PM\"}]"},{"id":6,"sesions":"[{\"id\":0,\"begintime\":\"8:00 AM\",\"endtime\":\"12:00 PM\"},{\"id\":1,\"begintime\":\"12:30 PM\",\"endtime\":\"11:59 PM\"}]"},{"id":7,"sesions":"[]"}]'
+    is_active: 1
+    entityid: "<?php echo $entity['index'] ?>"
+<?php endforeach ?>
+
+
+#Team:
+#<?php $x = 1; ?>
+#<?php foreach ($entities as $key => $entity): ?>
+#<?php $teamamount = rand(2, count($teams)); ?>
+#<?php for ($i = 0; $i < $teamamount-1; $i++): ?>
+#  Team<?php echo $entity['index'].$i ?>:
+#    code: "<?php echo md5($teams[$i].$entity['index']) ?>"
+#    name: "<?php echo $teams[$i] ?>"
+##    Responsible: [Ivette]
+##    Members: [Marisol, Magdalena, Ramon]
+##    Team: [Menagement]
+#    entityid: "<?php echo $entity['index'] ?>"
+#<?php $entities[$key]['teams'][] = $x ?>
+#<?php $x++; ?>
+#<?php endfor ?>
+#<?php endforeach ?>
+
+#Calendar:
+#  Created:
+#    code: "<?php echo md5(strtoupper('Creada')) ?>"
+#    name: Creada
+#    comment: 'Este estado se usa para tareas recien creadas y propuestas a incluir en un plan de trabajo'
+#    color: 6
+#  Acepted:
+#    code: "<?php echo md5(strtoupper('Aceptada')) ?>"
+#    name: Aceptada
+#    comment: 'Este estado se usa para tareas aceptadas por el trabajador y que comienzan su curso'
+#    color: 11
+#  Finished:
+#    code: "<?php echo md5(strtoupper('Terminada')) ?>"
+#    name: Terminada
+#    comment: 'Este estado se usa para tareas que se han terminado o cumplido'
+#    color: 16
+#  Slope:
+#    code: "<?php echo md5(strtoupper('Pendiente')) ?>"
+#    name: Pendiente
+#    comment: 'Este estado se usa para tareas que no se han aceptado'
+#    color: 26
+#
+#Taskstatus:
+#<?php foreach ($entities as $key => $entity): ?>
+#  Created<?php echo $entity['index'] ?>:
+#    customcolor: '2E8F0C'
+#    Calendar: Created
+#    entityid: "<?php echo $entity['index'] ?>"
+#<?php $entities[$key]['taskstatues'][] = "Created".$entity['index'] ?>
+#  Acepted<?php echo $entity['index'] ?>:
+#    customcolor: '8763CA'
+#    Calendar: Acepted
+#    entityid: "<?php echo $entity['index'] ?>"
+#<?php $entities[$key]['taskstatues'][] = "Acepted".$entity['index'] ?>
+#  Finished<?php echo $entity['index'] ?>:
+#    customcolor: 'D5B816'
+#    Calendar: Finished
+#    entityid: "<?php echo $entity['index'] ?>"
+#<?php $entities[$key]['taskstatues'][] = "Finished".$entity['index'] ?>
+#  Slope<?php echo $entity['index'] ?>:
+#    customcolor: 'FA7166'
+#    Calendar: Slope
+#    entityid: "<?php echo $entity['index'] ?>"
+#<?php $entities[$key]['taskstatues'][] = "Slope".$entity['index'] ?>
+#<?php endforeach ?>    
+#TaskstatusRelation:
+#<?php foreach ($entities as $key => $entity): ?>
+#  Created<?php echo $entity['index'] ?>-Acepted<?php echo $entity['index'] ?>:
+#    FromTaskstatus: "<?php echo 'Created'.$entity['index'] ?>"
+#    ToTaskstatus: "<?php echo 'Acepted'.$entity['index'] ?>"
+#  Created<?php echo $entity['index'] ?>-Slope<?php echo $entity['index'] ?>:
+#    FromTaskstatus: "<?php echo 'Created'.$entity['index'] ?>"
+#    ToTaskstatus: "<?php echo 'Slope'.$entity['index'] ?>"
+#  Acepted<?php echo $entity['index'] ?>-Finished<?php echo $entity['index'] ?>:
+#    FromTaskstatus: "<?php echo 'Acepted'.$entity['index'] ?>"
+#    ToTaskstatus: "<?php echo 'Finished'.$entity['index'] ?>"
+#  Slope<?php echo $entity['index'] ?>-Acepted<?php echo $entity['index'] ?>:
+#    FromTaskstatus: "<?php echo 'Slope'.$entity['index'] ?>"
+#    ToTaskstatus: "<?php echo 'Acepted'.$entity['index'] ?>"
+#<?php endforeach ?>  

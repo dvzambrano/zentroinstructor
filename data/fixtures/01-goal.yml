@@ -1,0 +1,244 @@
+# Goal:
+  # ARC1:
+    # code: "<?php echo md5(strtoupper('ARC 1.Impacto de los servicios.')) ?>"
+    # name: 'ARC 1.Impacto de los servicios.' 
+    # entityid: 1
+    # Period: [period1]
+  # ARC2:
+    # code: "<?php echo md5(strtoupper('ARC 2.Gestión de los Procesos Internos. ')) ?>"
+    # name: 'ARC 2.Gestión de los Procesos Internos. ' 
+    # entityid: 1
+    # Period: [period2]
+  # ARC3:
+    # code: "<?php echo md5(strtoupper('ARC 3.Eficiencia Económica.')) ?>"
+    # name: 'ARC 3.Eficiencia Económica.' 
+    # entityid: 1
+    # Period: [period3]
+  # OBJ1:
+    # code: "<?php echo md5(strtoupper('Mejorar los productos y servicios existentes y desarrollar nuevos que se ajusten a la demanda del territorio')) ?>"
+    # name: 'Mejorar los productos y servicios existentes y desarrollar nuevos que se ajusten a la demanda del sector empresarial del territorio' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [ARC1]
+  # OBJ11:
+    # code: "<?php echo md5(strtoupper('Lineamiento 134')) ?>"
+    # name: 'Lineamiento 134' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ1]
+  # OBJ111:
+    # code: "<?php echo md5(strtoupper('Revisar y reflejar en procedimientos el 100 % la cartera de productos y servicios institucional.')) ?>"
+    # name: 'Revisar y reflejar en procedimientos el 100 % la cartera de productos y servicios institucional.' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ11]
+  # OBJ12:
+    # code: "<?php echo md5(strtoupper('Lineamiento 129')) ?>"
+    # name: 'Lineamiento 129' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ1]
+  # OBJ121:
+    # code: "<?php echo md5(strtoupper('Dar respuesta al 95% de las demandas de servicios recibidas por parte de todos los clientes.')) ?>"
+    # name: 'Dar respuesta al 95% de las demandas de servicios recibidas por parte de todos los clientes.' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ12]
+  # OBJ13:
+    # code: "<?php echo md5(strtoupper('Se desarrollan dos nuevos servicios que tributan a elevar la eficacia de la toma de decisiones de nuestros clientes (Lineamiento 116, 131, 132, 137, 200)')) ?>"
+    # name: 'Se desarrollan dos nuevos servicios que tributan a elevar la eficacia de la toma de decisiones de nuestros clientes (Lineamiento 116, 131, 132, 137, 200)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ1]
+  # OBJ2:
+    # code: "<?php echo md5(strtoupper('Incrementar el impacto de los servicios ofertados en entidades del territorio y la sociedad.')) ?>"
+    # name: 'Incrementar el impacto de los servicios ofertados en entidades del territorio y la sociedad.' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [ARC1]
+  # OBJ21:
+    # code: "<?php echo md5(strtoupper('Se cumple el 100% de las acciones previstas para la implementación de las políticas de información y comunicación social.  (Lineamientos: 129, 131, 132, 137, 138, 139)')) ?>"
+    # name: 'Se cumple el 100% de las acciones previstas para la implementación de las políticas de información y comunicación social.  (Lineamientos: 129, 131, 132, 137, 138, 139)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ2]
+  # OBJ22:
+    # code: "<?php echo md5(strtoupper('Se ejecutan al menos 10 acciones de comunicación para elevar el conocimiento de las entidades del territorio y la sociedad en general sobre la importancia y utilidad de los servicios científico – técnicos.')) ?>"
+    # name: 'Se ejecutan al menos 10 acciones de comunicación para elevar el conocimiento de las entidades del territorio y la sociedad en general sobre la importancia y utilidad de los servicios científico – técnicos.' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ2]
+  # OBJ23:
+    # code: "<?php echo md5(strtoupper('Se asesora al menos el 10% de las empresas en Perfeccionamiento Empresarial en la implementación del Sistema de Gestión de Innovación establecido en el DL 252. ( Lineamiento  131, 134, 135)')) ?>"
+    # name: 'Se asesora al menos el 10% de las empresas en Perfeccionamiento Empresarial en la implementación del Sistema de Gestión de Innovación establecido en el DL 252. ( Lineamiento  131, 134, 135)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ2]
+  # OBJ24:
+    # code: "<?php echo md5(strtoupper('Se realizan al menos cinco acciones de capacitación. ( Lineamiento 130, 134, 137)')) ?>"
+    # name: 'Se realizan al menos cinco acciones de capacitación. ( Lineamiento 130, 134, 137)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ2]
+  # OBJ25:
+    # code: "<?php echo md5(strtoupper('Se evalúa la capacidad de respuesta de los servicios científicos- técnicos y de alto valor agregado en la implementación de los Lineamientos en entidades del territorio.( Lineamiento 122, 133)')) ?>"
+    # name: 'Se evalúa la capacidad de respuesta de los servicios científicos- técnicos y de alto valor agregado en la implementación de los Lineamientos en entidades del territorio.( Lineamiento 122, 133)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ2]
+  # OBJ3:
+    # code: "<?php echo md5(strtoupper('Perfeccionar la gestión y el desarrollo de la organización.')) ?>"
+    # name: 'Perfeccionar la gestión y el desarrollo de la organización.' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [ARC2]
+  # OBJ31:
+    # code: "<?php echo md5(strtoupper('Se solicita la certificación del sistema de la calidad de al menos uno de los procesos  claves ( Lineamiento 134)')) ?>"
+    # name: 'Se solicita la certificación del sistema de la calidad de al menos uno de los procesos  claves ( Lineamiento 134)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ3]
+  # OBJ32:
+    # code: "<?php echo md5(strtoupper('Se consolida la gestión ambiental en el centro. (Lineamientos 134)')) ?>"
+    # name: 'Se consolida la gestión ambiental en el centro. (Lineamientos 134)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ3]
+  # OBJ33:
+    # code: "<?php echo md5(strtoupper('Se rediseñan al menos dos de lo procesos claves del centro mediante el uso de las  TIC´s (Lineamientos 122)')) ?>"
+    # name: 'Se rediseñan al menos dos de lo procesos claves del centro mediante el uso de las  TIC´s (Lineamientos 122)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ3]
+  # OBJ4:
+    # code: "<?php echo md5(strtoupper('Incrementar la calidad del proceso de selección, preparación, superación y control de la actuación del cuadro y las reservas, y fortalecer la organización del trabajo y la capacitación de los Recursos Humanos.(Objetivo IX del CITMA, Lineamientos 4,138, 169, 170)')) ?>"
+    # name: 'Incrementar la calidad del proceso de selección, preparación, superación y control de la actuación del cuadro y las reservas, y fortalecer la organización del trabajo y la capacitación de los Recursos Humanos. (Objetivo IX del CITMA, Lineamientos 4,138, 169, 170)'
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [ARC2]
+  # OBJ41:
+    # code: "<?php echo md5(strtoupper('Se alcanza el 90 % del cumplimiento del programa de formación y superación profesional (incluyendo formación de doctores y máster).  (Lineamientos 138)')) ?>"
+    # name: 'Se alcanza el 90 % del cumplimiento del programa de formación y superación profesional (incluyendo formación de doctores y máster).  (Lineamientos 138)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ4]
+  # OBJ42:
+    # code: "<?php echo md5(strtoupper('Se ejecuta en un 100 % el programa de preparación político ideológica y de formación de valores en los cuadros y demás trabajadores. (Lineamientos 138)')) ?>"
+    # name: 'Se ejecuta en un 100 % el programa de preparación político ideológica y de formación de valores en los cuadros y demás trabajadores. (Lineamientos 138)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ4]
+  # OBJ43:
+    # code: "<?php echo md5(strtoupper('Se potencia el desarrollo de los valores humanos con énfasis en los valores patrióticos, éticos y morales así como la categorización profesional, docente y científica, y la formación técnica y profesional del cuadro y sus reservas, funcionarios, especialistas y trabajadores en general. (Lineamientos 138, 172)')) ?>"
+    # name: 'Se potencia el desarrollo de los valores humanos con énfasis en los valores patrióticos, éticos y morales así como la categorización profesional, docente y científica, y la formación técnica y profesional del cuadro y sus reservas, funcionarios, especialistas y trabajadores en general. (Lineamientos 138, 172)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ4]
+  # OBJ44:
+    # code: "<?php echo md5(strtoupper('Se potencia la seguridad y salud del trabajo. (Lineamientos 154)')) ?>"
+    # name: 'Se potencia la seguridad y salud del trabajo. (Lineamientos 154)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ4]
+  # OBJ45:
+    # code: "<?php echo md5(strtoupper('Se favorece la gestión integrada de todos los procesos del Sistema de Gestión de los Recursos Humanos que facilite el cumplimiento de la legislación laboral vigente según los requisitos del control interno y la prevención de indisciplinas, ilegalidades y actos delictivos. (Lineamientos 134,138)')) ?>"
+    # name: 'Se favorece la gestión integrada de todos los procesos del Sistema de Gestión de los Recursos Humanos que facilite el cumplimiento de la legislación laboral vigente según los requisitos del control interno y la prevención de indisciplinas, ilegalidades y actos delictivos. (Lineamientos 134,138)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ4]
+  # OBJ5:
+    # code: "<?php echo md5(strtoupper('Fortalecer  las actividades de la preparación para la defensa, la Seguridad  y el Control interno del centro')) ?>"
+    # name: 'Fortalecer  las actividades de la preparación para la defensa, la Seguridad  y el Control interno del centro' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [ARC2]
+  # OBJ51:
+    # code: "<?php echo md5(strtoupper('Mantener actualizado el Plan de Tiempo de Guerra y las Medidas para el Paso al Estado de Guerra; así como contar con el Plan de Reducción de Desastres. ')) ?>"
+    # name: 'Mantener actualizado el Plan de Tiempo de Guerra y las Medidas para el Paso al Estado de Guerra; así como contar con el Plan de Reducción de Desastres. ' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ5]
+  # OBJ52:
+    # code: "<?php echo md5(strtoupper('Se cumplen al 100% las acciones previstas en el Plan de seguridad y protección según orientaciones ministeriales.')) ?>"
+    # name: 'Se cumplen al 100% las acciones previstas en el Plan de seguridad y protección según orientaciones ministeriales.' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ5]
+  # OBJ53:
+    # code: "<?php echo md5(strtoupper('Se cumplen al 100% las acciones previstas en el programa de implementación del Sistema de Control Interno y todo el aparato legal necesario para la gestión de la institución.')) ?>"
+    # name: 'Se cumplen al 100% las acciones previstas en el programa de implementación del Sistema de Control Interno y todo el aparato legal necesario para la gestión de la institución.' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ5]
+  # OBJ54:
+    # code: "<?php echo md5(strtoupper('Cumplir al 100% las acciones previstas en el plan de auditoria interna del Sistema ')) ?>"
+    # name: 'Cumplir al 100% las acciones previstas en el plan de auditoria interna del Sistema ' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ5]
+  # OBJ6:
+    # code: "<?php echo md5(strtoupper('Elevar la eficiencia económica y el uso racional de los recursos del centro ')) ?>"
+    # name: 'Elevar la eficiencia económica y el uso racional de los recursos del centro ' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [ARC3]
+  # OBJ61:
+    # code: "<?php echo md5(strtoupper('Se establece un sistema de indicadores para lograr un mejor control del presupuesto y su ejecución por áreas. (Lineamientos 01, 05, 11, 16)')) ?>"
+    # name: 'Se establece un sistema de indicadores para lograr un mejor control del presupuesto y su ejecución por áreas. (Lineamientos 01, 05, 11, 16)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ6]
+  # OBJ62:
+    # code: "<?php echo md5(strtoupper('Se actualiza el sistema de costo en correspondencia con las orientaciones del CITMA. (Lineamientos 01, 05, 13)')) ?>"
+    # name: 'Se actualiza el sistema de costo en correspondencia con las orientaciones del CITMA. (Lineamientos 01, 05, 13)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ6]
+  # OBJ63:
+    # code: "<?php echo md5(strtoupper('Se alcanza una relación salario medio-productividad no superior a 0,97 en el año. (Lineamientos 41)')) ?>"
+    # name: 'Se alcanza una relación salario medio-productividad no superior a 0,97 en el año. (Lineamientos 41)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ6]
+  # OBJ64:
+    # code: "<?php echo md5(strtoupper('Se utiliza la formación de  precios aprobados por nuestro organismo superior y se aplica al 100% de los productos y servicios brindados. (Lineamientos 66, 68)')) ?>"
+    # name: 'Se utiliza la formación de  precios aprobados por nuestro organismo superior y se aplica al 100% de los productos y servicios brindados. (Lineamientos 66, 68)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ6]
+  # OBJ65:
+    # code: "<?php echo md5(strtoupper('Se ejecuta en no menos del 70 % el plan de mantenimiento y reparación del equipamiento tecnológico y del transporte. (Lineamientos 117, 122)')) ?>"
+    # name: 'Se ejecuta en no menos del 70 % el plan de mantenimiento y reparación del equipamiento tecnológico y del transporte. (Lineamientos 117, 122)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ6]
+  # OBJ66:
+    # code: "<?php echo md5(strtoupper('Se logran resultados positivos en el 100% de los controles que se reciban y se mantiene la contabilidad cerificada. (Lineamientos 12, 65)')) ?>"
+    # name: 'Se logran resultados positivos en el 100% de los controles que se reciban y se mantiene la contabilidad cerificada. (Lineamientos 12, 65)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ6]
+  # OBJ67:
+    # code: "<?php echo md5(strtoupper('Se logran cumplir los principales objetivos con una reducción en la relación entre gastos e ingresos de la actividad presupuestada con tratamiento especial. (Lineamientos 01, 05, 31)')) ?>"
+    # name: 'Se logran cumplir los principales objetivos con una reducción en la relación entre gastos e ingresos de la actividad presupuestada con tratamiento especial. (Lineamientos 01, 05, 31)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ6]
+  # OBJ68:
+    # code: "<?php echo md5(strtoupper('Se definen de manera cualitativa y cuantitativa el nivel de actividad en correspondencia con el Plan y Presupuesto aprobado, logrando el cumplimiento de los niveles de actividad establecidos en el plan de la economía para el año 2013. (Lineamientos 01, 05, 64)')) ?>"
+    # name: 'Se definen de manera cualitativa y cuantitativa el nivel de actividad en correspondencia con el Plan y Presupuesto aprobado, logrando el cumplimiento de los niveles de actividad establecidos en el plan de la economía para el año 2013. (Lineamientos 01, 05, 64)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ6]
+  # OBJ69:
+    # code: "<?php echo md5(strtoupper('Se enmarca la ejecución de los portadores energéticos dentro de las cifras aprobadas en el Plan de la Economía. (Lineamientos 253)')) ?>"
+    # name: 'Se enmarca la ejecución de los portadores energéticos dentro de las cifras aprobadas en el Plan de la Economía. (Lineamientos 253)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ6]
+  # OBJ610:
+    # code: "<?php echo md5(strtoupper('Se controla la ejecución del mantenimiento constructivo, logrando cumplir no menos del 70% del presupuesto asignado. (Lineamientos 117, 122)')) ?>"
+    # name: 'Se controla la ejecución del mantenimiento constructivo, logrando cumplir no menos del 70% del presupuesto asignado. (Lineamientos 117, 122)' 
+    # entityid: 1
+    # Period: [period3]
+    # Goal: [OBJ6]

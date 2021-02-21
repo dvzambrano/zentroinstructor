@@ -1,0 +1,61 @@
+# Resource:
+  # resource1:
+    # code: "<?php echo md5(strtoupper('Lapiz')) ?>"
+    # name: 'Lapiz'    
+    # rate: '200'
+    # extrarate: '250'
+    # comment: 'Recurso 1'
+  # resource2:
+    # code: "<?php echo md5(strtoupper('Goma')) ?>"
+    # name: 'Goma'    
+    # rate: '200'
+    # extrarate: '250'
+    # comment: 'Recurso 2'
+  # resource3:
+    # code: "<?php echo md5(strtoupper('PC')) ?>"
+    # name: 'PC'    
+    # rate: '500'
+    # extrarate: '600'
+    # comment: 'Recurso 3'
+  # resource4:
+    # code: "<?php echo md5(strtoupper('Silla')) ?>"
+    # name: 'Silla'    
+    # rate: '150'
+    # extrarate: '200'
+    # comment: 'Recurso 4'
+  # resource5:
+    # code: "<?php echo md5(strtoupper('Mesa')) ?>"
+    # name: 'Mesa'    
+    # rate: '100'
+    # extrarate: '110'
+    # comment: 'Recurso 5'
+  # resource6:
+    # code: "<?php echo md5(strtoupper('Ventilador')) ?>"
+    # name: 'Ventilador'    
+    # rate: '80'
+    # extrarate: '100'
+    # comment: 'Recurso 6'
+  # resource7:
+    # code: "<?php echo md5(strtoupper('Carro del centro')) ?>"
+    # name: 'Carro del centro'    
+    # rate: '190'
+    # extrarate: '230'
+    # comment: 'Recurso 7'
+  # resource8:
+    # code: "<?php echo md5(strtoupper('Escaner')) ?>"
+    # name: 'Escaner'    
+    # rate: '20'
+    # extrarate: '30'
+    # comment: 'Recurso 8'
+  # resource9:
+    # code: "<?php echo md5(strtoupper('Telefono')) ?>"
+    # name: 'Telefono'    
+    # rate: '120'
+    # extrarate: '160'
+    # comment: 'Recurso 9'
+  # resource10:
+    # code: "<?php echo md5(strtoupper('Internet')) ?>"
+    # name: 'Internet'    
+    # rate: '220'
+    # extrarate: '360'
+    # comment: 'Recurso 10'

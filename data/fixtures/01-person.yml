@@ -1,0 +1,98 @@
+Person:
+  User_admin:
+    code: "81092719101"
+#    picture: '../uploads/avatars/cutemale.png'
+    profile: '{"theme":"gray","customcolor":"[{\"calendar\":1,\"color\":\"F88015\"},{\"calendar\":2,\"color\":\"9D3283\"},{\"calendar\":3,\"color\":\"2951B9\"}]"}'
+    # Position: [Director]   
+    sfGuardUser: [User_admin]   
+  # Delma:
+    # Position: [Secretary]
+    # sfGuardUser: [Delma]
+    # code: 45fc567478f3ae899eb8e044448b6191
+  # Ana:
+    # Position: [Especialist]
+    # sfGuardUser: [Ana]
+    # code: 3f9dab31aa671ee3aa349ef20c860f08
+  # Amelia:
+    # Position: [Secretary]
+    # sfGuardUser: [Amelia]
+    # code: 608848b86f3d352f98aba9d15fe9b7d0
+  # Arianna:
+    # Position: [Especialist]
+    # sfGuardUser: Arianna
+    # code: ccd00d49a651cbd918ad67802fbfc5bc
+  # Beatriz:
+    # Position: [Especialist]
+    # sfGuardUser: Beatriz
+    # code: 8fbbdb0da3e752128af2925cad4ae4b0
+  # Carlos:
+    # Position: [Especialist]
+    # sfGuardUser: Carlos
+    # code: 7c4c7ab8152301bc2504b83b682be27b
+  # Carmen:
+    # Position: [Secretary]
+    # sfGuardUser: Carmen
+    # code: 07db038b906ed9f58122081fd3f95dcc
+  # Celia:
+    # Position: [Especialist]
+    # sfGuardUser: Celia
+    # code: fdfe97811dddeb77ec2589fe4804f869
+  # Dunia:
+    # Position: [Secretary]
+    # sfGuardUser: Dunia
+    # code: 50d03e0d05ac5b09b44508ff670d4df5
+  # Edith:
+    # sfGuardUser: Edith
+    # code: db9d154531f83a70edca52e8b8c136ed
+  # Elena:
+    # sfGuardUser: Elena
+    # code: 9beb991e839773965b79ea04a3bac0c3
+  # Ernesto:
+    # sfGuardUser: Ernesto
+    # code: 0e3346cce03c0410963337515ca462ab
+  # Ivette:
+    # sfGuardUser: Ivette
+    # code: a86b428c9d57fdbccd8bfd5b2c0bed84
+  # Marisol:
+    # sfGuardUser: Marisol
+    # code: d805e2abf4244c389e4adfa36de4ea61
+  # Magdalena:
+    # Position: [Especialist]
+    # sfGuardUser: Magdalena
+    # code: 912deb7d0b6bd08bee526d428ea75f73
+  # Ramon:
+    # sfGuardUser: Ramon
+    # code: 34e7998886c00d69f6cb728c9a1c16b3
+  # Rolando:
+    # sfGuardUser: Rolando
+    # code: d4b1599cbb4b021ccf9c79f468eb0c5d
+  # Roberto:
+    # sfGuardUser: Roberto
+    # code: 717e3c7789fc8b64d348a68099cfc32e
+  # Tania:
+    # Position: [Especialist]
+    # sfGuardUser: Tania
+    # code: db955172fa9493c272fc62a41685f97b
+  # Yamila:
+    # sfGuardUser: Yamila
+    # code: 31104e9e342fefa90caefb212bf7ce99
+  # Yasmin:
+    # sfGuardUser: Yasmin
+    # code: f51dd6bf3558499f725973f40d559795
+  # Manuel:
+    # sfGuardUser: Manuel
+    # code: aea10c4d88e170911bb7f68c44b52f71
+  # Eduardo:
+    # sfGuardUser: Eduardo
+    # code: aa94fa7929e84446241ce9bfaa4e1e0f
+  # Ileana:
+    # Position: [Especialist]
+    # sfGuardUser: Ileana
+    # code: 7948e7a3526af21e78ff99aaf5f634b1
+  # Marcia:
+    # sfGuardUser: Marcia
+    # code: b2417405780253e9137c73b657129c3f
+  # Lizandra:
+    # Position: [Secretary]
+    # sfGuardUser: Lizandra
+    # code: f517c19c2ccd3ccf0173f04256ec03da

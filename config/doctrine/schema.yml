@@ -1,0 +1,503 @@
+Position:
+  connection: doctrine
+  tableName: zi1_position
+  columns:
+    code:
+      type: string(50)
+      notnull: true
+      unique: true
+    name:
+      type: string(130)
+      notnull: true
+    comment:
+      type: string()
+      notnull: false
+    entityid:
+      type: integer
+      notnull: false
+# end-instructor-schema
+
+Person:
+  connection: doctrine
+  tableName: zab_person
+  columns:
+    code:
+      type: string(50)
+      notnull: false
+      unique: true
+    comment:
+      type: string()
+    picture:
+      type: string()
+    profile:
+      type: string()
+    baseline:
+      type: string()
+    rate:
+      type: decimal(18,2)
+    extrarate:
+      type: decimal(18,2)
+    positionid:
+      type: integer
+    sf_guard_user_id:
+      type: integer
+  relations:
+    Position: { onDelete: CASCADE, local: positionid, foreign: id }
+    sfGuardUser: { onDelete: CASCADE, local: sf_guard_user_id, foreign: id }
+
+Calendar:
+  connection: doctrine
+  tableName: zab_calendar
+  columns:
+    code:
+      type: string(50)
+      notnull: true
+      unique: true
+    name:
+      type: string(130)
+      notnull: true
+    comment:
+      type: string()
+    color:
+      type: integer
+      default: 0
+  relations:
+    Taskstatus: { onDelete: CASCADE, local: id, foreign: calendarid, type: one, foreignAlias: Calendar }
+Event:
+  connection: doctrine
+  tableName: zab_event
+  columns:
+    code:
+      type: string(50)
+      notnull: true
+      unique: true
+    name:
+      type: string(130)
+      notnull: true
+    comment:
+      type: string()
+    allday:
+      type: boolean
+      default: 0
+    start:
+      type: datetime
+      notnull: true
+    end:
+      type: datetime
+      notnull: true
+    calendarid:
+      type: integer
+    reminderid:
+      type: integer
+    location:
+      type: string()
+    link:
+      type: string()
+  relations:
+    Calendar: { onDelete: CASCADE, local: calendarid, foreign: id, foreignAlias: Events }
+    Reminder: { onDelete: CASCADE, local: reminderid, foreign: id, foreignAlias: Events }
+    Task: { onDelete: CASCADE, local: id, foreign: eventid, type: one, foreignAlias: Event }
+
+Mailqueue:
+  connection: doctrine
+  tableName: zi1_mailqueue
+  columns:
+    name:
+      type: string(50)
+      primary: true
+    value:
+      type: string() 
+
+Local:
+  connection: doctrine
+  tableName: zi1_local
+  columns:    
+    code:
+      type: string(50)
+      notnull: false
+      unique: true
+    name:
+      type: string(130)
+    comment:
+      type: string()
+    parentid:
+      type: integer          
+    is_excluding:
+      type: boolean  
+      default: 0
+    icon:
+      type: string()
+    path:
+      type: string()
+    entityid:
+      type: integer  
+  relations:
+    Local: { onDelete: CASCADE, local: parentid, foreign: id, foreignAlias: Locals }
+    Tasks: { class: Task, refClass: LocalTaskRelation, local: localid, foreign: taskid }
+LocalTaskRelation:
+  connection: doctrine
+  tableName: zi1_localtaskrelation
+  columns:
+    localid:
+      type: integer      
+      primary: true      
+    taskid:
+      type: integer
+      primary: true          
+  relations:
+    Local: { local: localid, foreign: id, type: one }
+    Task: { local: taskid, foreign: id, type: one }
+
+Plan:
+  actAs:
+    Timestampable: ~
+  connection: doctrine
+  tableName: zi1_plan
+  columns:    
+    code:
+      type: string(50)
+      unique: true
+    name:
+      type: string(130)
+    comment:
+      type: string()
+      notnull: false
+    baseline:
+      type: string()
+      notnull: false
+    start:
+      type: date
+      notnull: false
+    parentid:
+      type: integer
+      notnull: false
+    created_by:
+      type: integer  
+    path:
+      type: string()
+    entityid:
+      type: integer  
+  relations:
+    Plan: { onDelete: CASCADE, local: parentid, foreign: id, foreignAlias: Plans }
+    Goals: { class: Goal, refClass: GoalPlanRelation, local: planid, foreign: goalid, foreignAlias: Plans }
+    Creator: { class: Person, onDelete: CASCADE, local: created_by, foreign: id, foreignAlias: PlansIhaveCreated }
+    Persons: { class: Person, refClass: PlanPersonRelation, local: planid, foreign: personid, foreignAlias: PlansImAutorized }
+GoalPlanRelation:
+  connection: doctrine
+  tableName: zi1_goalplanrelation
+  columns:
+    planid:
+      type: integer
+      primary: true
+    goalid:
+      type: integer
+      primary: true
+  relations:
+    Plan: { onDelete: CASCADE, local: planid, foreign: id, type: one }
+    Goal: { onDelete: CASCADE, local: goalid, foreign: id, type: one }
+PlanPersonRelation:
+  connection: doctrine
+  tableName: zi1_planpersonrelation
+  columns:
+    planid:
+      type: integer
+      primary: true
+    personid:
+      type: integer
+      primary: true
+    readonly:
+      type: integer
+      primary: true
+  relations:
+    Plan: { onDelete: CASCADE, local: planid, foreign: id, type: one }
+    Person: { onDelete: CASCADE, local: personid, foreign: id, type: one }
+
+Goal:
+  connection: doctrine
+  tableName: zi1_goal
+  columns:    
+    code:
+      type: string(50)
+      unique: true
+    name:
+      type: string
+    comment:
+      type: string
+      notnull: false
+    periodid:
+      type: integer
+      notnull: false
+    parentid:
+      type: integer
+      notnull: false
+    icon:
+      type: string()
+    path:
+      type: string()
+    entityid:
+      type: integer 
+  relations:
+    Goal: { onDelete: CASCADE, local: parentid, foreign: id, foreignAlias: Goals }
+    Period: { onDelete: CASCADE, local: periodid, foreign: id, foreignAlias: Goals }
+
+Period:
+  connection: doctrine
+  tableName: zi1_period
+  columns:    
+    code:
+      type: string(50)
+      unique: true
+    name:
+      type: string(130)
+    comment:
+      type: string
+      notnull: false
+    periodid:
+      type: integer
+      notnull: false
+
+Schedule:
+  connection: doctrine
+  tableName: zi1_schedule
+  columns:
+    code:
+      type: string(50)
+      unique: true
+    name:
+      type: string(130)
+    sesions:
+      type: string()
+    exceptions:
+      type: string()
+    is_active:
+      type: boolean
+    entityid:
+      type: integer
+
+Taskstatus:
+  connection: doctrine
+  tableName: zi1_taskstatus
+  columns:
+    customcolor:
+      type: string()
+    calendarid:
+      type: integer  
+    entityid:
+      type: integer 
+    iscomplete:
+      type: boolean
+      default: 0
+    issuspended:
+      type: boolean
+      default: 0
+  relations:
+    TaskStatues: { class: Taskstatus, refClass: TaskstatusRelation, local: fromstatus_id, foreign: tostatus_id }
+    Calendar: { onDelete: CASCADE, local: calendarid, foreign: id, type: one, foreignAlias: Taskstatus }
+TaskstatusRelation:
+  connection: doctrine
+  tableName: zi1_taskstatusrelation
+  columns:
+    fromstatus_id:
+      type: integer
+      primary: true
+    tostatus_id:
+      type: integer
+      primary: true
+  relations:
+    FromTaskstatus: { class: Taskstatus, onDelete: CASCADE, local: fromstatus_id, foreign: id }
+    ToTaskstatus: { class: Taskstatus, onDelete: CASCADE, local: tostatus_id, foreign: id }
+
+Task:
+  actAs:
+    Timestampable: ~
+  connection: doctrine
+  tableName: zi1_task
+  columns:  
+    durationvalue:
+      type: decimal    
+    durationtype:
+      type: string(10)
+    manuallyprogrammed:
+      type: boolean
+      default: 0
+    percentage:
+      type: decimal
+    frequencytype:
+      type: integer
+    dailyrepetition:
+      type: string()
+    weeklyrepetition:
+      type: string()
+    monthlyrepetition:
+      type: string()
+    yearlyrepetition:
+      type: string()
+    breakingrepetition:
+      type: string()
+    participants:
+      type: string()
+    relateds:
+      type: string()
+    evidence:
+      type: string()
+    parentid:
+      type: integer
+    serialid:
+      type: integer
+    multipartid:
+      type: integer
+    tasktypeid:
+      type: integer
+    taskstatusid:
+      type: integer 
+    localid:
+      type: integer  
+    responsibleid:
+      type: integer  
+    eventid:
+      type: integer  
+    created_by:
+      type: integer 
+    finished:
+      type: datetime 
+    remarked:
+      type: datetime
+    activityorigin:
+      type: integer
+      default: 1  
+    activitytype:
+      type: integer
+      default: 1  
+    isprincipal:
+      type: boolean
+      default: 0  
+    path:
+      type: string()
+    entityid:
+      type: integer 
+  relations:    
+    Event: { onDelete: CASCADE, local: eventid, foreign: id, type: one, foreignAlias: Task }
+    Task: { onDelete: CASCADE, local: parentid, foreign: id, foreignAlias: Tasks }
+    Serial: { class: Task, onDelete: CASCADE, local: serialid, foreign: id, foreignAlias: TasksInSerial }
+    Multipart: { class: Task, onDelete: SET NULL, local: multipartid, foreign: id, foreignAlias: TasksInMultipart }
+    Tasktype: { onDelete: CASCADE, local: tasktypeid, foreign: id, foreignAlias: Tasks }
+    Taskstatus: { onDelete: SET NULL, local: taskstatusid, foreign: id, foreignAlias: Tasks }
+    Local: { onDelete: CASCADE, local: localid, foreign: id, foreignAlias: Tasks }
+    Creator: { class: Person, onDelete: CASCADE, local: created_by, foreign: id, foreignAlias: TasksIhaveCreated }
+    Person: { onDelete: CASCADE, local: responsibleid, foreign: id, foreignAlias: TasksImResponsible }
+    Plans: { onDelete: CASCADE, class: Plan, refClass: PlanTaskRelation, local: taskid, foreign: planid, foreignAlias: Tasks }
+    Resources: { class: Resource, refClass: TaskResourceRelation, local: taskid, foreign: resourceid, foreignAlias: Tasks }
+PlanTaskRelation:
+  connection: doctrine
+  tableName: zi1_plantaskrelation
+  columns:
+    planid:
+      type: integer
+      primary: true
+    taskid:
+      type: integer
+      primary: true
+  relations:
+    Task: { onDelete: CASCADE, local: taskid, foreign: id, type: one }
+    Plan: { local: planid, foreign: id, type: one }
+TaskResourceRelation:
+  connection: doctrine
+  tableName: zi1_resourcetaskrelation
+  columns:
+    resourceid:
+      type: integer
+      primary: true
+    taskid:
+      type: integer
+      primary: true
+    amount:
+      type: decimal(18,2)
+  relations:
+    Task: { local: taskid, foreign: id, type: one }
+    Resource: { local: resourceid, foreign: id, type: one }
+
+Tasktype:
+  connection: doctrine
+  tableName: zi1_tasktype
+  columns:    
+    code:
+      type: string(50)      
+      unique: true
+    name:
+      type: string(130)      
+    comment:
+      type: string()      
+      notnull: false
+    parentid:
+      type: integer
+      notnull: false
+    icon:
+      type: string()
+    path:
+      type: string()
+  relations:
+    Tasktype: { onDelete: CASCADE, local: parentid, foreign: id, foreignAlias: Tasktypes }
+
+Team: 
+  connection: doctrine
+  tableName: zi1_team
+  columns:    
+    code:
+      type: string(50)
+      unique: true
+    name:
+      type: string(130)
+    comment:
+      type: string()
+      notnull: false
+    icon:
+      type: string()
+    responsibleid:
+      type: integer
+    parentid:
+      type: integer
+    entityid:
+      type: integer
+      notnull: false
+    path:
+      type: string()
+  relations:
+    Team: { onDelete: CASCADE, local: parentid, foreign: id, foreignAlias: Teams }
+    Responsible: { class: Person, onDelete: CASCADE, local: responsibleid, foreign: id, type: one, foreignAlias: TeamsImBoss }
+    Members: { class: Person, refClass: TeamPersonRelation, local: teamid, foreign: personid, foreignAlias: TeamsIBelong }
+TeamPersonRelation:
+  connection: doctrine
+  tableName: zi1_teampersonrelation  
+  columns:
+    teamid:
+      type: integer
+    personid:
+      type: integer
+  relations:
+    Team:
+      local: teamid
+      foreign: id
+      type: one
+      onDelete: SET NULL
+    Person:
+      local: personid
+      foreign: id
+      type: one
+      onDelete: SET NULL
+
+Resource:
+  connection: doctrine
+  tableName: zi1_resource
+  columns:
+    name:
+      type: string(130)
+    code:
+      type: string(50)
+      notnull: false
+      unique: true
+    rate:
+      type: decimal(18,2)
+    extrarate:
+      type: decimal
+    comment:
+      type: string

@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- 
+vim: expandtab ts=4 sw=4 sts=4 tw=78 
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
+    version="-//W3C//DTD XHTML 1.1//EN" dir="ltr">
+<head>
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Zentro&reg; documentation</title>
+    <link rel="stylesheet" type="text/css" href="docs.css" />
+</head>
+
+<body id="top">
+<div id="header">
+    <h1>Documentación del <a href="../../index.php">Zentro&reg; <span class="myadmin">Instructor I</span></a></h1>
+</div>
+
+<!-- TOP MENU -->
+<ul class="header">
+    <li><a href="documentation.html#top">Ir arriba</a></li>
+    <li><a href="documentation.html#require">Requerimientos</a></li>
+    <li><a href="documentation.html#intro">Introducción</a></li>
+    <li><a href="documentation.html#setup">Instalación</a></li>
+</ul>
+
+<div id="body">
+
+<!-- REQUIREMENTS -->
+<h2 id="require">Requerimientos</h2>
+
+<ul>
+  <li><b>PHP</b> 5.2.5 o superior con las extensiones <tt>pdo_mysql, openssl, ldap, xsl, gd2, mbstring, ctype, zip, mcrypt</tt></li>
+    <li><b>MySQL</b> 5.0 o superior</li>
+    <li><b>Navegador Web</b> con cookies habilitadas.</li>
+</ul>
+
+<!-- INTRODUCTION -->
+<h2 id="intro">Introducción</h2>
+
+<p> Este sistema gestiona planes de actividades, almacenando datos relevantes de las tareas que los componen como su Título, Tipografía, Local, Responsable, Estado, Nivel de completamiento, Periodicidad, Participantes, entre otros, que permiten obtener planificaciones más realistas con un mínimo de esfuerzo.</p>
+
+<h3>Actualmente el sistema es capaz de:</h3>
+
+<ul>
+  <li>Realizar planificaciones según lo descrito en la <abbr title="Instrucción I del Presidente de los Consejos de Estado y de Ministros de la República de Cuba">Instrucción I</abbr> y sobre la base del tiempo real disponible.</li>
+    <li>Generar los planes Anuales, Mensuales e Individuales de Actividades para cada entidad, departamento y/o persona de la organización.</li>
+    <li>Sincronizar actividades entre planes que tienen relaciones. </li>
+    <li>Generar Informes de Cumplimiento y Puntualizaciones de Planes de Actividades.</li>
+    <li>Enviar notificaciones para alertar de la necesidad de aprobación de planes Anuales y Mensuales.</li>
+    <li>Generar y explorar líneas bases de los planes realizados para su posterior análisis.</li>
+    <li>Generar gráficos y estadísticas según las necesidades de cada organización.</li>
+  </ul>
+
+
+<!-- INSTALLATION -->
+<h2 id="setup">Instalación</h2>
+
+<ol>
+  <li>Descomprima el sistema en la carpeta raíz del servidor web. Si no se tiene acceso a la carpeta raíz,
+        debe descomprimirse en un directorio de la estación de trabajo local y, después del paso 4, transferir la carpeta al servidor web usando, por ejemplo, <abbr title="Files Transfer Protocol: Protocolo de Transferencia de Ficheros">FTP</abbr>.</li>
+    <li>Asegúrese que el directorio del sistema y todos sus archivos tengan el propietario adecuado (En un servidor con <acronym title="Núcleo libre de sistema operativo basado en Unix. Marca registrada de Linus Benedict Torvalds">Linux</acronym>
+    <abbr title="Operating System: Sistema Operativo">OS</abbr>, si PHP se ejecuta en modo seguro, el tener directorios y archivos con diferentes propietarios podría acarrear problemas).</li>
+    <li>Configure los parámetros de su sistema editando a mano el archivo 
+    <tt>databases.yml</tt>, o usando el asistente de instalación para aquellos que prefieren la instalación gráfica.
+    <ul>
+      <li>Para editar manualmente el archivo, use su editor de texto preferido para ver el contenido del archivo <tt>databases.yml</tt> que se encuentra en la carpeta <tt>config</tt> del sistema de ficheros del Zentro&reg; Instructor I.  Elcontenido debe quedar como sigue:
+                <pre>all:<br />  doctrine:<br />    class: sfDoctrineDatabase<br />    param:<br />      dsn: '<abbr title="Gestor de Bases de Datos utilizado en el servidor">mysql</abbr>:host=<abbr title="Nombre o dirección IP del servidor de Bases de Datos">localhost</abbr>;dbname=<abbr title="Nombre de la Bases de Datos que usará el sistema">basededatos</abbr>'<br />      username: <abbr title="Nombre del usuario de acceso a la Bases de Datos">usuario</abbr><br />      password: <abbr title="Contraseña del usuario de acceso a la Bases de Datos">contraseña</abbr>             </pre>
+        </li>
+            <li id="setup_script">Puede usar el 
+                <a href="../../install.php">Asistente de Instalación</a>.
+				<pre>INFORMACIÓN: Puede consultar video tutorial <a href="../tutorial/01 Instalacion.html" target="_blank">publicado aquí</a>.        </pre>
+				<object type="text/html" data="../tutorial/01 Instalacion.html" width="665" height="598"> </object> 
+			  <pre class="important">Cuando el sistema no puede conectarse con su base de datos; ya sea porque el servidor no está disponible, o por
+una mala configuración en el archivo <tt>databases.yml</tt> automaticamente este redireccionará a la <a href="../../install.php">página de instalación</a>.</pre>
+        </li>
+    </ul></li>
+    <li>Abra el <a href="../../index.php">directorio principal del sistema</a>
+        en su nevegador web con lo que se debe mostrar la pantalla de bienvenida con sus respectivas opciones, o un formulario de autenticación para que se ingresen las credenciales de acceso.</li>
+</ol>
+
+<h3 id="linked-tables">&nbsp;</h3>
+
+  <!-- DEVELOPERS -->
+
+<h2 id="developers">H2</h2>
+
+<p> Escriba el texto aqui... </p>
+
+<h2 id="copyright">&nbsp;</h2>
+
+<pre>
+Copyright (C) 2015 Donel Vázquez Zambrano &lt;<a href="mailto:zentro@nauta.cu">zentro_at_nauta.cu</a>&gt;
+                                          &lt;<a href="mailto:dvzambrano@gmail.com">dvzambrano_at_gmail.com</a>&gt;
+
+Este software y la marca con la que se distribuye, están registrados en el Centro Nacional del Derecho de 
+Autor y la Oficina Cubana de la Propiedad Industrial respectivamente. Si usted usa, copia, distribuye y/o,
+altera este software sin los permisos exclusivos de su autor puede ser juzgado según las leyes 
+internacionales del Derecho de Autor.
+
+La información contenida en este documento puede estar sujeta a cambios sin previo aviso.<br />Las únicas garantías de los productos y servicios Zentro® se especifican en las expresas que acompañan 
+dichos productos y servicios. Ninguna información contenida en este documento deberá interpretarse 
+como garantía adicional.</pre>
+
+</div>
+
+  <ul id="footer">
+    <li>Copyright &copy; 2015 <a href="http://www.cubansoftware.com">Zentro&reg; Instructor I</a></li>
+  </ul>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Excepcion para la carga de la configuracion global
+report1:
+  is_secure: false
+report2:
+  is_secure: false
+report3:
+  is_secure: false
+reportbaselinetasks:
+  is_secure: false

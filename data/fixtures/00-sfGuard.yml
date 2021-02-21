@@ -1,0 +1,641 @@
+sfGuardUser:
+  User_admin:
+    first_name:  Donel
+    last_name:  Vazquez Zambrano
+    email_address:  zentro@nauta.cu
+    username:       admin
+    password:       admin
+    is_super_admin: true
+    Groups:         [AdminGroup]
+#-------------------------------------------------------------------------------    
+  # Delma:
+    # first_name: 'Ana Delma'
+    # last_name:  Santos Izquierdo
+    # email_address: delma@empresa.cu
+    # username: delma
+    # algorithm: sha1
+    # salt: 45fc567478f3ae899eb8e044448b6191
+    # password: delma
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:58'
+    # updated_at: '2013-09-13 09:49:58'
+    # Groups: [BasicGroup]
+  # Ana:
+    # first_name: 'Ana'
+    # last_name:  Matias Gourriel
+    # email_address: ana@empresa.cu
+    # username: Ana
+    # algorithm: sha1
+    # salt: 3f9dab31aa671ee3aa349ef20c860f08
+    # password: Ana1
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:58'
+    # updated_at: '2013-09-13 09:49:58'
+    # Groups: [AdminGroup]
+  # Amelia:
+    # first_name: Amelia
+    # last_name: 'Leyva Martinez'
+    # email_address: amelia@empresa.cu
+    # username: Amelia
+    # algorithm: sha1
+    # salt: 608848b86f3d352f98aba9d15fe9b7d0
+    # password: Amelia
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:58'
+    # updated_at: '2013-09-13 09:49:58'
+    # Groups: [BasicGroup]
+  # Arianna:
+    # first_name: Arianna
+    # last_name: 'Matos Lopez'
+    # email_address: arianna@empresa.cu
+    # username: arianna
+    # algorithm: sha1
+    # salt: ccd00d49a651cbd918ad67802fbfc5bc
+    # password: 122a5da397aca5bc903bfaf8dd70dd9cba2083dd
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:58'
+    # updated_at: '2013-09-13 09:49:58'
+    # Groups: [BasicGroup]
+  # Beatriz:
+    # first_name: Beatriz
+    # last_name:  Grave de Peralta Muñoz
+    # email_address: beatriz@empresa.cu
+    # username: betty
+    # algorithm: sha1
+    # salt: 8fbbdb0da3e752128af2925cad4ae4b0
+    # password: e6bfc7ac7badfeb90a1d37cb33e8b6fba5fc65a4
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:58'
+    # updated_at: '2013-09-13 09:49:58'
+    # Groups: [BasicGroup]
+  # Carlos:
+    # first_name: 'Carlos Alberto'
+    # last_name:  Ibarra Romero
+    # email_address: carlos@empresa.cu
+    # username: carlos
+    # algorithm: sha1
+    # salt: 7c4c7ab8152301bc2504b83b682be27b
+    # password: 7dc2d289d7d691503bacd561db9681375f455123
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:58'
+    # updated_at: '2013-09-13 09:49:58'
+    # Groups: [AdminGroup]
+  # Carmen:
+    # first_name: Carmen
+    # last_name:  Batista Pupo
+    # email_address: carmen@empresa.cu
+    # username: carmen
+    # algorithm: sha1
+    # salt: 07db038b906ed9f58122081fd3f95dcc
+    # password: d3fb0b9a5e86fcfdb0088b0f01e6d3a68250465a
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:58'
+    # updated_at: '2013-09-13 09:49:58'
+    # Groups: [BasicGroup]
+  # Celia:
+    # first_name: Celia
+    # last_name:  Naranjo Damas
+    # email_address: celia@empresa.cu
+    # username: Celia
+    # algorithm: sha1
+    # salt: fdfe97811dddeb77ec2589fe4804f869
+    # password: 51b5c66a49deb9fe12e81673555f7afe7664fe42
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:58'
+    # updated_at: '2013-09-13 09:49:58'
+    # Groups: [BasicGroup]
+  # Dunia:
+    # first_name: Dunia
+    # last_name:  Cruz Mulet
+    # email_address: dunia@empresa.cu
+    # username: Dunia
+    # algorithm: sha1
+    # salt: 50d03e0d05ac5b09b44508ff670d4df5
+    # password: 3d2943a2c8ee896e8ba048607309b78ce25b0ddf
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:58'
+    # updated_at: '2013-09-13 09:49:58'
+    # Groups: [BasicGroup]
+  # Edith:
+    # first_name: Edith
+    # last_name: 'Gonzalez Avila'
+    # email_address: edith@empresa.cu
+    # username: edith
+    # algorithm: sha1
+    # salt: db9d154531f83a70edca52e8b8c136ed
+    # password: d7e0b22eaf0e05122ee876e11536bd7027551c51
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:58'
+    # updated_at: '2013-09-13 09:49:58'
+    # Groups: [BasicGroup]
+  # Elena:
+    # first_name: Elena
+    # last_name: 'Sanchez Patterson'
+    # email_address: elena@empresa.cu
+    # username: elena
+    # algorithm: sha1
+    # salt: 9beb991e839773965b79ea04a3bac0c3
+    # password: eecce57248da0dbb04e193e3ff8bb2c18ffb0fda
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:58'
+    # updated_at: '2013-09-13 09:49:58'
+    # Groups: [BasicGroup]
+  # Ernesto:
+    # first_name: Ernesto
+    # last_name: 'Morales Linares'
+    # email_address: ernesto@empresa.cu
+    # username: ernesto
+    # algorithm: sha1
+    # salt: 0e3346cce03c0410963337515ca462ab
+    # password: 36a459e140a275f8d776473cec5075e61c5a914e
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:58'
+    # updated_at: '2013-09-13 09:49:58'
+    # Groups: [BasicGroup]
+  # Ivette:
+    # first_name: Ivette
+    # last_name:  Suarez Contreras
+    # email_address: ivette@empresa.cu
+    # username: ivette
+    # algorithm: sha1
+    # salt: a86b428c9d57fdbccd8bfd5b2c0bed84
+    # password: 86435e2931f3be6f64ed1d073c639da1ebf4cebc
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:58'
+    # updated_at: '2013-09-13 09:49:58'
+    # Groups: [BasicGroup]
+  # Marisol:
+    # first_name: Marisol
+    # last_name: 'Zamora Lopez'
+    # email_address: marisol@empresa.cu
+    # username: marisol
+    # algorithm: sha1
+    # salt: d805e2abf4244c389e4adfa36de4ea61
+    # password: f68fa959bdd16eb5f710a26bad939d198847d8eb
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:58'
+    # updated_at: '2013-09-13 09:49:58'
+    # Groups: [BasicGroup]
+  # Magdalena:
+    # first_name: Magdalena
+    # last_name: 'Avila Ochoa'
+    # email_address: magdalena@empresa.cu
+    # username: Magdalena
+    # algorithm: sha1
+    # salt: 912deb7d0b6bd08bee526d428ea75f73
+    # password: c81121536340ab1cc58c8b4b38b73293a5e57993
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:58'
+    # updated_at: '2013-09-13 09:49:58'
+    # Groups: [BasicGroup]
+  # Ramon:
+    # first_name: Ramon
+    # last_name: 'Pina Rodriguez'
+    # email_address: ramon@empresa.cu
+    # username: ramon
+    # algorithm: sha1
+    # salt: 34e7998886c00d69f6cb728c9a1c16b3
+    # password: f66385c7964d84a98305ba6ceb9b18a9a0eb89fe
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:59'
+    # updated_at: '2013-09-13 09:49:59'
+    # Groups: [BasicGroup]
+  # Rolando:
+    # first_name: Rolando
+    # last_name:  Palacios Zuñiga
+    # email_address: rolando@empresa.cu
+    # username: rolando
+    # algorithm: sha1
+    # salt: d4b1599cbb4b021ccf9c79f468eb0c5d
+    # password: 76693c277ec58f2bf4048fad1635627c2e44dfa2
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:59'
+    # updated_at: '2013-09-13 09:49:59'
+    # Groups: [BasicGroup]
+  # Roberto:
+    # first_name: Roberto
+    # last_name: 'Sarmiento Cruz'
+    # email_address: roberto@empresa.cu
+    # username: Roberto
+    # algorithm: sha1
+    # salt: 717e3c7789fc8b64d348a68099cfc32e
+    # password: eaa7c0655c62863f3cd8a71c0f39a52a877994e9
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:59'
+    # updated_at: '2013-09-13 09:49:59'
+    # Groups: [BasicGroup]
+  # Tania:
+    # first_name: Tania
+    # last_name: 'Cruz Villareal'
+    # email_address: tania@empresa.cu
+    # username: tania
+    # algorithm: sha1
+    # salt: db955172fa9493c272fc62a41685f97b
+    # password: 495eac073d2148af82dee0d177265934875a32a4
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:59'
+    # updated_at: '2013-09-13 09:49:59'
+    # Groups: [BasicGroup]
+  # Yamila:
+    # first_name: Yamila
+    # last_name: 'Tamayo Escalona'
+    # email_address: yamila@empresa.cu
+    # username: yamila
+    # algorithm: sha1
+    # salt: 31104e9e342fefa90caefb212bf7ce99
+    # password: 22c38d774aa887a4aefa3617b653d9b3fc3df901
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:59'
+    # updated_at: '2013-09-13 09:49:59'
+    # Groups: [BasicGroup]
+  # Yasmin:
+    # first_name: Yasmin
+    # last_name: 'Ricardo Ricardo'
+    # email_address: yasmin@empresa.cu
+    # username: yasmin
+    # algorithm: sha1
+    # salt: f51dd6bf3558499f725973f40d559795
+    # password: 8427955080c0f7a7789039770f7c1c368361c6c4
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:59'
+    # updated_at: '2013-09-13 09:49:59'
+    # Groups: [BasicGroup]
+  # Manuel:
+    # first_name: Manuel
+    # last_name: 'Estrada Cruz'
+    # email_address: manuel@empresa.cu
+    # username: manuel
+    # algorithm: sha1
+    # salt: aea10c4d88e170911bb7f68c44b52f71
+    # password: ec896e989f6f90d603c9b8df27da615a7aa5ca8f
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:59'
+    # updated_at: '2013-09-13 09:49:59'
+    # Groups: [BasicGroup]
+  # Eduardo:
+    # first_name: Eduardo
+    # last_name: 'Vazquez Sanzano'
+    # email_address: eduardo@empresa.cu
+    # username: eduardo
+    # algorithm: sha1
+    # salt: aa94fa7929e84446241ce9bfaa4e1e0f
+    # password: eduardo
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:59'
+    # updated_at: '2013-09-13 09:49:59'
+    # Groups: [AdminGroup]
+  # Ileana:
+    # first_name: Ileana
+    # last_name:  Milanes Velazquez
+    # email_address: ileana@empresa.cu
+    # username: ileana
+    # algorithm: sha1
+    # salt: 7948e7a3526af21e78ff99aaf5f634b1
+    # password: 79e418c4d2b6fadcefc39d72fb8e560dc2f8abcc
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:59'
+    # updated_at: '2013-09-13 09:49:59'
+    # Groups: [BasicGroup]
+  # Marcia:
+    # first_name: Marcia
+    # last_name: 'Rojas Santos'
+    # email_address: marcia@empresa.cu
+    # username: marcia
+    # algorithm: sha1
+    # salt: b2417405780253e9137c73b657129c3f
+    # password: 46f9004f517a7ba4e5e278138a11d4cc87ba607c
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:59'
+    # updated_at: '2013-09-13 09:49:59'
+    # Groups: [BasicGroup]
+  # Lizandra:
+    # first_name: Lizandra
+    # last_name: 'Guerrero Arias'
+    # email_address: lizandra@empresa.cu
+    # username: Lizandra
+    # algorithm: sha1
+    # salt: f517c19c2ccd3ccf0173f04256ec03da
+    # password: 8cd5f20873b87e4fad45c9b872f8092ecf21bbcf
+    # is_active: true
+    # is_super_admin: false
+    # last_login: null
+    # created_at: '2013-09-13 09:49:59'
+    # updated_at: '2013-09-13 09:49:59'
+    # Groups: [BasicGroup]
+
+sfGuardGroup:
+  AdminGroup:
+    name:           admin
+    description:    Administrador(a)
+    Permissions:    [manageentity, managereminder, manageconfiguration, managemodule, manageuser, manageperson, managelog, managefiles, managecharts, managecalendar, managecontacttype, manageentity, manageposition, manageperiod, managegoal, manageplan, manageresource, managetasktype, managelocal, managetaskstatus, manageteam, manageschedule, managetask]
+  AdvancedGroup:
+    name:           advanced
+    description:    Planificador(a)
+    Permissions:    [manageplan, managecalendar, manageposition, manageperiod, managegoal, manageresource, managetasktype, managelocal, managetaskstatus, manageteam, manageschedule, managetask]
+  BasicGroup:
+    name:           basic
+    description:    Usuario(a)
+    Permissions:    [manageplan, managecalendar]
+
+sfGuardPermission:
+  managemodule:
+    name:           managemodule
+    description:    'Administrar módulos'
+  managemoduleadd:
+    name:           managemoduleadd
+    description:    'Administrar módulos (adicionar)'
+  managemoduleedit:
+    name:           managemoduleedit
+    description:    'Administrar módulos (editar)'
+  managemoduledelete:
+    name:           managemoduledelete
+    description:    'Administrar módulos (eliminar)'
+    
+  manageuser:
+    name:           manageuser
+    description:    'Administrar usuarios'
+  manageuseradd:
+    name:           manageuseradd
+    description:    'Administrar usuarios (adicionar)'
+  manageuseredit:
+    name:           manageuseredit
+    description:    'Administrar usuarios (editar)'
+  manageuserdelete:
+    name:           manageuserdelete
+    description:    'Administrar usuarios (eliminar)'
+    
+  managereminder:
+    name:           managereminder
+    description:    'Administrar recordatorios'
+  managereminderadd:
+    name:           managereminderadd
+    description:    'Administrar recordatorios (adicionar)'
+  managereminderedit:
+    name:           managereminderedit
+    description:    'Administrar recordatorios (editar)'
+  managereminderdelete:
+    name:           managereminderdelete
+    description:    'Administrar recordatorios (eliminar)'
+
+  manageperson:
+    name:           manageperson
+    description:    'Administrar personas'
+  managepersonadd:
+    name:           managepersonadd
+    description:    'Administrar personas (adicionar)'
+  managepersonedit:
+    name:           managepersonedit
+    description:    'Administrar personas (editar)'
+  managepersondelete:
+    name:           managepersondelete
+    description:    'Administrar personas (eliminar)'
+
+  managefiles:
+    name:           managefiles
+    description:    'Administrar archivos'
+
+  managelog:
+    name:           managelog
+    description:    'Administrar trazas'
+
+  managecharts:
+    name:           managecharts
+    description:    'Administrar graficos'
+
+  managecalendar:
+    name:           managecalendar
+    description:    'Administrar calendario'
+
+  manageconfiguration:
+    name:           manageconfiguration
+    description:    'Administrar configuracion global'#Administrar planes de trabajo
+  manageplan:
+    name:           manageplan
+    description:    'Administrar planes de trabajo'
+  manageplanadd:
+    name:           manageplanadd
+    description:    'Administrar planes de trabajo (adicionar)'
+  manageplanedit:
+    name:           manageplanedit
+    description:    'Administrar planes de trabajo (editar)'
+  manageplandelete:
+    name:           manageplandelete
+    description:    'Administrar planes de trabajo (eliminar)'
+  manageplantoplan:
+    name:           manageplantoplan
+    description:    'Administrar planes de trabajo (planificar)'
+  manageplanbaseline:
+    name:           manageplanbaseline
+    description:    'Administrar planes de trabajo (linea base)'
+  manageplanreport:
+    name:           manageplanreport
+    description:    'Administrar planes de trabajo (reportes)'
+#Administrar recursos materiales
+  manageresource:
+    name:           manageresource
+    description:    'Administrar recursos materiales'
+  manageresourceadd:
+    name:           manageresourceadd
+    description:    'Administrar recursos materiales (adicionar)'
+  manageresourceedit:
+    name:           manageresourceedit
+    description:    'Administrar recursos materiales (editar)'
+  manageresourcedelete:
+    name:           manageresourcedelete
+    description:    'Administrar recursos materiales (eliminar)'
+#Administrar los objetivos de trabajo
+  managegoal:
+    name:           managegoal
+    description:    'Administrar los objetivos de trabajo'
+  managegoaladd:
+    name:           managegoaladd
+    description:    'Administrar los objetivos de trabajo (adicionar)'
+  managegoaledit:
+    name:           managegoaledit
+    description:    'Administrar los objetivos de trabajo (editar)'
+  managegoaldelete:
+    name:           managegoaldelete
+    description:    'Administrar los objetivos de trabajo (eliminar)'
+#Administrar los tipos de tarea
+  managetasktype:
+    name:           managetasktype
+    description:    'Administrar los tipos de tarea'
+  managetasktypeadd:
+    name:           managetasktypeadd
+    description:    'Administrar los tipos de tarea (adicionar)'
+  managetasktypeedit:
+    name:           managetasktypeedit
+    description:    'Administrar los tipos de tarea (editar)'
+  managetasktypedelete:
+    name:           managetasktypedelete
+    description:    'Administrar los tipos de tarea (eliminar)'
+#Administrar los locales
+  managelocal:
+    name:           managelocal
+    description:    'Administrar los locales'
+  managelocaladd:
+    name:           managelocaladd
+    description:    'Administrar los locales (adicionar)'
+  managelocaledit:
+    name:           managelocaledit
+    description:    'Administrar los locales (editar)'
+  managelocaldelete:
+    name:           managelocaldelete
+    description:    'Administrar los locales (eliminar)'
+#Administrar los estados de las tareas
+  managetaskstatus:
+    name:           managetaskstatus
+    description:    'Administrar los estados de las tareas'
+  managetaskstatusadd:
+    name:           managetaskstatusadd
+    description:    'Administrar los estados de las tareas (adicionar)'
+  managetaskstatusedit:
+    name:           managetaskstatusedit
+    description:    'Administrar los estados de las tareas (editar)'
+  managetaskstatusdelete:
+    name:           managetaskstatusdelete
+    description:    'Administrar los estados de las tareas (eliminar)'
+#Administrar los grupos
+  manageteam:
+    name:           manageteam
+    description:    'Administrar los grupos'
+  manageteamadd:
+    name:           manageteamadd
+    description:    'Administrar los grupos (adicionar)'
+  manageteamedit:
+    name:           manageteamedit
+    description:    'Administrar los grupos (editar)'
+  manageteamdelete:
+    name:           manageteamdelete
+    description:    'Administrar los grupos (eliminar)'
+#Administrar los horarios
+  manageschedule:
+    name:           manageschedule
+    description:    'Administrar los horarios'
+  managescheduleadd:
+    name:           managescheduleadd
+    description:    'Administrar los horarios (adicionar)'
+  managescheduleedit:
+    name:           managescheduleedit
+    description:    'Administrar los horarios (editar)'
+  managescheduledelete:
+    name:           managescheduledelete
+    description:    'Administrar los horarios (eliminar)'
+#Administrar las tareas
+  managetask:
+    name:           managetask
+    description:    'Administrar las tareas'
+  managetaskadd:
+    name:           managetaskadd
+    description:    'Administrar las tareas (adicionar)'
+  managetaskedit:
+    name:           managetaskedit
+    description:    'Administrar las tareas (editar)'
+  managetaskdelete:
+    name:           managetaskdelete
+    description:    'Administrar las tareas (eliminar)'
+#Administrar las periodos
+  manageperiod:
+    name:           manageperiod
+    description:    'Administrar las periodos'
+  manageperiodadd:
+    name:           manageperiodadd
+    description:    'Administrar las periodos (adicionar)'
+  manageperiodedit:
+    name:           manageperiodedit
+    description:    'Administrar las periodos (editar)'
+  manageperioddelete:
+    name:           manageperioddelete
+    description:    'Administrar las periodos (eliminar)'
+#Administrar las cargos
+  manageposition:
+    name:           manageposition
+    description:    'Administrar las cargos'
+  managepositionadd:
+    name:           managepositionadd
+    description:    'Administrar las cargos (adicionar)'
+  managepositionedit:
+    name:           managepositionedit
+    description:    'Administrar las cargos (editar)'
+  managepositiondelete:
+    name:           managepositiondelete
+    description:    'Administrar las cargos (eliminar)'
+    
+  managecontacttype:
+    name:           managecontacttype
+    description:    'Administrar tipos de contacto'
+  managecontacttypeadd:
+    name:           managecontacttypeadd
+    description:    'Administrar tipos de contacto (adicionar)'
+  managecontacttypeedit:
+    name:           managecontacttypeedit
+    description:    'Administrar tipos de contacto (editar)'
+  managecontacttypedelete:
+    name:           managecontacttypedelete
+    description:    'Administrar tipos de contacto (eliminar)'
+    
+  manageentity:
+    name:           manageentity
+    description:    'Administrar entidades'
+  manageentityadd:
+    name:           manageentityadd
+    description:    'Administrar entidades (adicionar)'
+  manageentityedit:
+    name:           manageentityedit
+    description:    'Administrar entidades (editar)'
+  manageentitydelete:
+    name:           manageentitydelete
+    description:    'Administrar entidades (eliminar)'
+  manageselfentity:
+    name:           manageselfentity
+    description:    'Administrar propia entidad'

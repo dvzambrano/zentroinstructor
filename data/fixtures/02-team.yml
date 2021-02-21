@@ -1,0 +1,48 @@
+# Team:
+  # Menagement:
+    # code: "<?php echo md5(strtoupper('Gerencia')) ?>"
+    # name: 'Gerencia'
+    # Responsible: [User_admin]
+    # Members: [Delma, Ana, Amelia]
+    # path: '/NULL/1'
+    # entityid: 1
+  # Development:
+    # code: "<?php echo md5(strtoupper('Desarrollo')) ?>"
+    # name: 'Desarrollo'
+    # Responsible: [Beatriz]
+    # Team: [Menagement]
+    # Members: [Arianna, Carlos, Carmen]
+    # path: '/NULL/1/2'
+    # entityid: 1
+  # Deployment:
+    # code: "<?php echo md5(strtoupper('Implementación')) ?>"
+    # name: 'Implementación'
+    # Responsible: [Ernesto]
+    # Team: [Menagement]
+    # Members: [Celia, Dunia, Edith, Elena]
+    # path: '/NULL/1/3'
+    # entityid: 1
+  # Design:
+    # code: "<?php echo md5(strtoupper('Diseño')) ?>"
+    # name: 'Diseño'
+    # Responsible: [Ivette]
+    # Team: [Menagement]
+    # Members: [Marisol, Magdalena, Ramon]
+    # path: '/NULL/1/4'
+    # entityid: 1
+  # Analistics:
+    # code: "<?php echo md5(strtoupper('Ingeniería')) ?>"
+    # name: 'Ingeniería'
+    # Responsible: [Rolando]
+    # Team: [Menagement]
+    # Members: [Roberto, Tania]
+    # path: '/NULL/1/5'
+    # entityid: 1
+  # Testing:
+    # code: "<?php echo md5(strtoupper('Calidad')) ?>"
+    # name: 'Calidad'
+    # Responsible: [Yamila]
+    # Team: [Menagement]
+    # Members: [Yasmin, Manuel, Eduardo, Ileana, Marcia, Lizandra]
+    # path: '/NULL/1/6'
+    # entityid: 1
